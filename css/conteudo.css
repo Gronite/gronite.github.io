@@ -1,0 +1,230 @@
+.subespaco {
+  background-color: rgba(18, 11, 55, 1);
+  border-top: 5px solid;
+  border-image: linear-gradient(to left, #00ff00, #83009f, #0000ff);
+  border-image-slice: 1;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
+
+.dentro {
+  padding: 10px 20px;
+  gap: 100px;
+  position: relative;
+}
+
+.dentro2 {
+  display: grid;
+  grid-column: 2;
+
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.dentro2 li {
+  position: relative;
+  padding: 30px 0px;
+}
+
+.formacao,
+.trabalhos {
+  left: 250px;
+  max-width: 350px;
+}
+
+.dentro2 h3 {
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+
+.trabalhos {
+  grid-row: 3;
+}
+
+.dentro2 .experiencia {
+  max-width: 300px;
+  text-align: right;
+  right: 250px;
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.subespaco::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 100%;
+  background-color: rgba(25, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.subespaco::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(25, 0, 0, 0.5);
+  right: 0px;
+  bottom: 0px;
+  width: 160px;
+  height: 100%;
+}
+
+.bola1 {
+  width: 90px;
+  height: 100px;
+  background-color: rgba(25, 0, 0, 0.5);
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  left: 160px;
+  top: 60px;
+  z-index: 1;
+}
+
+.bola1::before {
+  content: "🎓";
+  font-size: 70px;
+  position: relative;
+  left: -10px;
+}
+
+.bola2 {
+  width: 90px;
+  height: 100px;
+  background-color: rgba(25, 0, 0, 0.5);
+  border-radius: 50% 0 0 50%;
+  position: absolute;
+  right: -110px;
+  top: 80px;
+  bottom: 40%;
+  z-index: 1;
+  padding: 0px;
+}
+
+.bola2::before {
+  content: "👨‍💻";
+  font-size: 50px;
+  position: relative;
+  right: 3px;
+  top: 15px;
+}
+
+.bola3 {
+  width: 90px;
+  height: 100px;
+  background-color: rgba(25, 0, 0, 0.5);
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  left: 160px;
+  bottom: 60px;
+  z-index: 1;
+}
+
+.bola3::before {
+  content: "🗃️";
+  font-size: 60px;
+  position: relative;
+  top: 7px;
+}
+
+@media (max-width: 780px) {
+  .dentro2 {
+    grid-template-columns: 1;
+  }
+
+  .subespaco::before {
+    display: none;
+  }
+
+  .subespaco::after {
+    display: none;
+  }
+
+  .formacao,
+  .trabalhos {
+    left: 80px;
+  }
+
+  .experiencia {
+    right: 0px;
+  }
+
+  .bola1,
+  .bola3 {
+    left: 0px;
+  }
+
+  .bola2 {
+    right: -99px;
+    margin: 0px;
+  }
+
+  .dentro2 .experiencia {
+    right: 80px;
+  }
+}
+
+@media (max-width: 765px) {
+
+.dentro2 .formacao,
+  .dentro2 .trabalhos {
+   width: 300px;
+  }
+  }
+
+@media (max-width: 652px) {
+  .bola2 {
+    bottom: 45%;
+  }
+}
+
+@media (max-width: 522px) {
+  .bola1 {
+    top: 90px;
+  }
+
+  .bola2 {
+    bottom: 48%;
+    z-index: 0;
+  }
+
+  .bola3 {
+    bottom: 120px;
+  }
+}
+
+@media (max-width: 560px) {
+  .dentro2 .formacao,
+  .dentro2 .trabalhos {
+   width: 300px;
+  }
+
+  .dentro2 .experiencia{
+     width: 282px;
+    right: 150px;
+  }
+}
+
+@media (max-width: 555px) {
+.dentro2 .experiencia{
+  transform: translateX(calc((100vw - 555px) * 1)); /* Mover 1 pixel a cada pixel que a largura diminui abaixo de 600px */
+}
+
+}
+
+@media (max-width: 400px) {
+  
+  .dentro2 .formacao,
+  .dentro2 .trabalhos {
+   width: 200px;
+  }
+  .dentro2 .experiencia{
+    width: 202px;
+   right: -33px;
+ }
+}
+
+@media (max-width: 560px) {
+  .bola2 {
+    right: -103px;
+  }
+}
